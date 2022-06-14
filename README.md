@@ -1,6 +1,6 @@
 # Assignment for studies at Business College Helsinki
 
-This is an assignment for studies at Helsinki Business Gollege and is supposed to be only for studying purpuses.
+This is an assignment for studies at Helsinki Business Gollege and is supposed to be only for studying purposes.
 
 # About the project
 
