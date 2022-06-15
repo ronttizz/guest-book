@@ -9,6 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Config\Framework\HtmlSanitizer\SanitizerConfig;
 
 class SpaController extends AbstractController
 {
@@ -24,17 +25,17 @@ class SpaController extends AbstractController
                 "id" => $log->getId(),
                 "user" => $log->getUser(),
                 "message" => $log->getMessage(),
-                "datetime" => $log->getCreated()->format("d.m.Y H:i"),
+                "created" => $log->getCreated()->format("d.m.Y H:i:s"),
             ];
         }
 
         return $this->render('spa/index.html.twig', [
-            'guestbook' => $guestbook,
+            'guestbook' => array_reverse($guestbook),
         ]);
     }
 
     #[Route('/create', name: 'app_create')]
-    public function create(Request $request, ManagerRegistry $doctrine): Response
+    public function create(SanitizerConfig $sanitizer, Request $request, ManagerRegistry $doctrine): Response
     {
         // Setting up the EntityManager
         $em = $doctrine->getManager();

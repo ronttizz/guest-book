@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: url("../5086.jpg");
+  background-size: cover;
+  display: flex;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+  background-color: bisque;
+  width: fit-content;
+  padding: 1rem;
+  border: 2px black solid;
+  border-radius: 10px;
+}
+
+.welcome {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.top {
+  line-height: 3rem;
+}
+
+.credit {
+  font-size: 0.6rem;
+  text-align: center;
+  line-height: normal;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.username,
+.message {
+  padding: 0.5rem;
+}
+
+.message {
+  resize: none;
+}
+
+.entries {
+  margin-top: 2rem;
+}
+
+.submit {
+  width: fit-content;
+  align-self: center;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  background-color: chartreuse;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.entry {
+  border: 1px green solid;
+  display: flex;
+  flex-direction: column;
+  min-width: 50vw;
+  max-width: 75vw;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+}
+
+.user {
+  text-align: right;
+  font-size: 0.75rem;
+}

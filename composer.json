@@ -19,6 +19,8 @@
         "symfony/runtime": "*",
         "symfony/twig-bundle": "6.1.*",
         "symfony/yaml": "*",
+        "tgalopin/html-sanitizer": "^1.5",
+        "tgalopin/html-sanitizer-bundle": "^1.4",
         "twig/extra-bundle": "^2.12|^3.0",
         "twig/twig": "^2.12|^3.0"
     },

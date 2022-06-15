@@ -3,27 +3,29 @@
 {% block title %}Guestbook{% endblock %}
 
 {% block body %}
-
-<div>
-<h1>Welcome to guestbook!</h1>
-<p>Please leave a message down below.</p>
-</div>
-<div>
-<form action="{{path('app_create')}}">
-<label for="name">Your name</label>
-<input type="text" name="name" id="name" />
-<lable for="message">Your message</label>
-<textarea name="message"></textarea>
-<input type="submit" value="Post entry" />
-</form>
-</div>
-<div>
-<h2>Guestbook</h2>
-{% for log in guestbook %}
-<div>
-<p> {{ log.message }} </p>
-<p> {{ log.user }} - {{ log.created }} </p>
-</div>
-{% endfor %}
-</div>
+<main>
+    <div class="welcome">
+        <h1>Welcome to guestbook!</h1>
+        <p>Please leave a message down below.</p>
+    </div>
+    <div class="top">
+        <form action="{{path('app_create')}}" class="inputs">
+            <label for="name">Your name</label>
+            <input type="text" name="name" id="name" placeholder="Your name" class="username" required />
+            <label for="message">Your message</label>
+            <textarea name="message" class="message" placeholder="Your message..." cols="40" rows="8" required></textarea>
+            <input type="submit" value="Post entry" class="submit" />
+        </form>
+        <p class="credit">Background image: <br /><a href='https://www.freepik.com/vectors/seamless-pattern' target="_blank">Seamless pattern vector created by visnezh - www.freepik.com</a></p>
+    </div>
+    <div class="entries">
+        <h1 class="header">Guestbook</h1>
+        {% for log in guestbook %}
+            <div class="entry">
+                <p> {{ log.message }} </p>
+                <p class="user"> {{ log.user }} - {{ log.created }} </p>
+            </div>
+        {% endfor %}
+    </div>
+</main>
 {% endblock %}
