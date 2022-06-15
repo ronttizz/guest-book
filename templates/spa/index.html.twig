@@ -9,12 +9,12 @@
 <p>Please leave a message down below.</p>
 </div>
 <div>
-<form action="/" method="POST">
+<form action="{{path('create')}}">
 <label for="name">Your name</label>
 <input type="text" name="name" id="name" />
 <lable for="message">Your message</label>
 <textarea name="message"></textarea>
-<input type="submit" value="POST MESSAGE" />
+<input type="submit" value="Post entry" />
 </form>
 </div>
 <div>
