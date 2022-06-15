@@ -18,6 +18,12 @@
 </form>
 </div>
 <div>
-<h2>This will have the guestbook entries.</h2>
+<h2>Guestbook</h2>
+{% for log in guestbook %}
+<div>
+<p> {{ log.message }} </p>
+<p> {{ log.user }} - {{ log.created }} </p>
+</div>
+{% endfor %}
 </div>
 {% endblock %}
