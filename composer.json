@@ -15,7 +15,6 @@
         "symfony/dotenv": "*",
         "symfony/flex": "^2",
         "symfony/framework-bundle": "*",
-        "symfony/maker-bundle": "^1.43",
         "symfony/proxy-manager-bridge": "6.1.*",
         "symfony/runtime": "*",
         "symfony/twig-bundle": "6.1.*",
@@ -75,5 +74,8 @@
             "require": "6.1.*",
             "docker": false
         }
+    },
+    "require-dev": {
+        "symfony/maker-bundle": "^1.43"
     }
 }
