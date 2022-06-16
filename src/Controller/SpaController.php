@@ -9,7 +9,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Config\Framework\HtmlSanitizer\SanitizerConfig;
 
 class SpaController extends AbstractController
 {
@@ -35,7 +34,7 @@ class SpaController extends AbstractController
     }
 
     #[Route('/create', name: 'app_create')]
-    public function create(SanitizerConfig $sanitizer, Request $request, ManagerRegistry $doctrine): Response
+    public function create(Request $request, ManagerRegistry $doctrine): Response
     {
         // Setting up the EntityManager
         $em = $doctrine->getManager();

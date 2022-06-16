@@ -19,7 +19,8 @@ main {
   align-items: center;
   margin: 2rem auto;
   background-color: bisque;
-  width: fit-content;
+  min-width: fit-content;
+  max-width: 75vw;
   padding: 1rem;
   border: 2px black solid;
   border-radius: 10px;
@@ -49,6 +50,7 @@ main {
 .username,
 .message {
   padding: 0.5rem;
+  border-radius: 5px;
 }
 
 .message {
@@ -64,7 +66,7 @@ main {
   align-self: center;
   margin: 1rem;
   padding: 1rem 2rem;
-  background-color: chartreuse;
+  background-color: rgb(255, 187, 0);
 }
 
 .header {
@@ -73,11 +75,11 @@ main {
 }
 
 .entry {
-  border: 1px green solid;
+  border: 2px rgb(255, 187, 0) solid;
   display: flex;
   flex-direction: column;
   min-width: 50vw;
-  max-width: 75vw;
+  max-width: 65vw;
   padding: 1rem 1.5rem;
   margin-bottom: 2rem;
   border-radius: 10px;
